@@ -1,0 +1,20 @@
+{
+  "name": "thennavan-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GayathriCodes2/THENNAVAN-BACKEND.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GayathriCodes2/THENNAVAN-BACKEND/issues"
+  },
+  "homepage": "https://github.com/GayathriCodes2/THENNAVAN-BACKEND#readme"
+}
