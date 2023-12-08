@@ -1,11 +1,12 @@
+// tasteOfOurLandRoutes.js
 const express = require('express');
 const router = express.Router();
 const tasteOfOurLandController = require('../controllers/tasteOfOurLandController');
 
-router.post('/', tasteOfOurLandController.createAddress);
-router.get('/', tasteOfOurLandController.getAllAddresses);
-router.get('/:address_id', tasteOfOurLandController.getAddressById);
-router.patch('/:address_id', tasteOfOurLandController.updateAddress);
-router.delete('/:address_id', tasteOfOurLandController.deleteAddress);
+router.post('/tasteofourland', tasteOfOurLandController.createTasteOfOurLand);
+router.get('/tasteofourland', tasteOfOurLandController.getAllTasteOfOurLand);
+router.get('/tasteofourland/:tasteOfOurLand_id', tasteOfOurLandController.getTasteOfOurLandById);
+router.put('/tasteofourland/:tasteOfOurLand_id', tasteOfOurLandController.updateTasteOfOurLand);
+router.delete('/tasteofourland/:tasteOfOurLand_id', tasteOfOurLandController.deleteTasteOfOurLand);
 
 module.exports = router;

@@ -1,11 +1,12 @@
+// loveOfOurLadiesRoutes.js
 const express = require('express');
 const router = express.Router();
 const loveOfOurLadiesController = require('../controllers/loveOfOurLadiesController');
 
-router.post('/', loveOfOurLadiesController.createAddress);
-router.get('/', loveOfOurLadiesController.getAllAddresses);
-router.get('/:address_id', loveOfOurLadiesController.getAddressById);
-router.patch('/:address_id', loveOfOurLadiesController.updateAddress);
-router.delete('/:address_id', loveOfOurLadiesController.deleteAddress);
+router.post('/loveofourladies', loveOfOurLadiesController.createLoveOfOurLadies);
+router.get('/loveofourladies', loveOfOurLadiesController.getAllLoveOfOurLadies);
+router.get('/loveofourladies/:loveOfOurLadies_id', loveOfOurLadiesController.getLoveOfOurLadiesById);
+router.put('/loveofourladies/:loveOfOurLadies_id', loveOfOurLadiesController.updateLoveOfOurLadies);
+router.delete('/loveofourladies/:loveOfOurLadies_id', loveOfOurLadiesController.deleteLoveOfOurLadies);
 
 module.exports = router;
