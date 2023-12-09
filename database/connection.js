@@ -1,9 +1,9 @@
-
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://thennavanstores:<password>@cluster0.c9rj3h5.mongodb.net/?retryWrites=true&w=majority";
+const url = "mongodb+srv://thennavanstores:Muthukumar%402002@cluster0.c9rj3h5.mongodb.net/"; 
+
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
+const client = new MongoClient(url, {
     serverApi: {
         version: ServerApiVersion.v1,
         strict: true,
@@ -13,7 +13,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
     try {
-        // Connect the client to the server	(optional starting in v4.7)
+        // Connect the client to the server (optional starting in v4.7)
         await client.connect();
         // Send a ping to confirm a successful connection
         await client.db("admin").command({ ping: 1 });
@@ -23,4 +23,5 @@ async function run() {
         await client.close();
     }
 }
-run().catch(console.dir);
+
+module.exports = run; // Export the run function

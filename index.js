@@ -1,6 +1,8 @@
+// index.js
+
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('./database/connection');
+const dbConnect = require('./database/connection'); // Import the run function
 const errorMiddleware = require('./middleware/errorMiddleware');
 
 // Include your routes
@@ -19,8 +21,8 @@ app.use('/fromfarmers', fromFarmersRoutes);
 app.use('/tasteofourland', tasteOfOurLandRoutes);
 app.use('/loveofourladies', loveOfOurLadiesRoutes);
 
-// Use 'connected' event instead of 'open'client.connect()
-db.connect()
+// Call the run function to connect to MongoDB
+dbConnect()
     .then(() => {
         app.listen(port, () => {
             console.log(`Server is running on http://localhost:${port}`);
