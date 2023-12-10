@@ -1,64 +1,71 @@
 // adminController.js
-const Admin = require('../models/admin');
+const Admin = require('../models/admin'); // Assuming the Admin model is in the same directory
 
+// Create operation
 exports.createAdmin = async (req, res) => {
     try {
-        const newAdmin = new Admin(req.body);
-        const savedAdmin = await newAdmin.save();
-        res.status(201).json(savedAdmin);
+        const adminData = req.body;
+        const newAdmin = await Admin.create(adminData);
+        res.status(201).json(newAdmin);
     } catch (error) {
-        res.status(400).json({ message: 'Error creating admin', error });
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
+// Read one operation
+exports.getAdminById = async (req, res) => {
+    try {
+        const adminId = req.params.id;
+        const admin = await Admin.findById(adminId);
+        if (!admin) {
+            return res.status(404).json({ error: 'Admin not found' });
+        }
+        res.status(200).json(admin);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+};
+
+// Read all operation
 exports.getAllAdmins = async (req, res) => {
     try {
         const admins = await Admin.find();
         res.status(200).json(admins);
     } catch (error) {
-        res.status(500).json({ message: 'Error retrieving admins', error });
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
-exports.getAdminById = async (req, res) => {
-    try {
-        const admin = await Admin.findOne({ _id: req.params.admin_id });
-        if (!admin) {
-            res.status(404).json({ message: 'Admin not found' });
-        } else {
-            res.status(200).json(admin);
-        }
-    } catch (error) {
-        res.status(500).json({ message: 'Error retrieving admin', error });
-    }
-};
-
+// Update operation
 exports.updateAdmin = async (req, res) => {
     try {
-        const updatedAdmin = await Admin.findOneAndUpdate(
-            { _id: req.params.admin_id },
-            req.body,
-            { new: true }
-        );
+        const adminId = req.params.id;
+        const updatedAdminData = req.body;
+        const updatedAdmin = await Admin.findByIdAndUpdate(adminId, updatedAdminData, { new: true });
         if (!updatedAdmin) {
-            res.status(404).json({ message: 'Admin not found' });
-        } else {
-            res.status(200).json(updatedAdmin);
+            return res.status(404).json({ error: 'Admin not found' });
         }
+        res.status(200).json(updatedAdmin);
     } catch (error) {
-        res.status(500).json({ message: 'Error updating admin', error });
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
+// Delete operation
 exports.deleteAdmin = async (req, res) => {
     try {
-        const deletedAdmin = await Admin.findOneAndDelete({ _id: req.params.admin_id });
+        const adminId = req.params.id;
+        const deletedAdmin = await Admin.findByIdAndDelete(adminId);
         if (!deletedAdmin) {
-            res.status(404).json({ message: 'Admin not found' });
-        } else {
-            res.status(200).json(deletedAdmin);
+            return res.status(404).json({ error: 'Admin not found' });
         }
+        res.status(204).end(); // No content
     } catch (error) {
-        res.status(500).json({ message: 'Error deleting admin', error });
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
     }
 };
