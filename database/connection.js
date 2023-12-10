@@ -1,26 +1,15 @@
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const url = "mongodb+srv://thennavanstores:Muthukumar%402002@cluster0.c9rj3h5.mongodb.net/"; 
+const mongoose = require('mongoose');
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(url, {
-    serverApi: {
-        version: ServerApiVersion.v1,
-        strict: true,
-        deprecationErrors: true,
-    }
-});
+// Define MongoDB connection URL and options
+const url = 'mongodb+srv://thennavanstores:Muthukumar%402002@cluster0.c9rj3h5.mongodb.net/'; 
+const options = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+};
 
-async function run() {
-    try {
-        // Connect the client to the server (optional starting in v4.7)
-        await client.connect();
-        // Send a ping to confirm a successful connection
-        await client.db("admin").command({ ping: 1 });
-        console.log("Pinged your deployment. You successfully connected to MongoDB!");
-    } finally {
-        // Ensures that the client will close when you finish/error
-        await client.close();
-    }
-}
+// Connect to MongoDB
+mongoose.connect(url, options)
+    .then(() => console.log('Connected to MongoDB successfully!'))
+    .catch(error => console.error('Error connecting to MongoDB:', error));
 
-module.exports = run; // Export the run function
+module.exports = mongoose.connection;

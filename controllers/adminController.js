@@ -7,6 +7,7 @@ exports.createAdmin = async (req, res) => {
         const savedAdmin = await newAdmin.save();
         res.status(201).json(savedAdmin);
     } catch (error) {
+        console.error('Error creating admin:', error);
         res.status(400).json({ message: 'Error creating admin', error });
     }
 };
