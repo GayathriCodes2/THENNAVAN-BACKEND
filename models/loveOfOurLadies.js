@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const loveOfOurLadiesSchema = new Schema({
-    loveofourladies_id: { type: Number, required: true, unique: true, autoIncrement: true },
+    loveofourladies_id: { type: Number, autoIncrement: true, required: true },
     productImage: { type: String, required: true },
     productName: { type: String, required: true },
     description: { type: String, required: true },

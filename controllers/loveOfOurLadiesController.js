@@ -37,7 +37,7 @@ exports.updateLoveOfOurLadies = async (req, res) => {
     try {
         const updatedLoveOfOurLadies = await LoveOfOurLadies.findOneAndUpdate(
             { _id: req.params.loveOfOurLadies_id },
-            req.body,
+            req.body, 
             { new: true }
         );
         if (!updatedLoveOfOurLadies) {

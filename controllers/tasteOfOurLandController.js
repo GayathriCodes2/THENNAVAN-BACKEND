@@ -33,6 +33,7 @@ exports.getTasteOfOurLandById = async (req, res) => {
     }
 };
 
+
 exports.updateTasteOfOurLand = async (req, res) => {
     try {
         const updatedTasteOfOurLand = await TasteOfOurLand.findOneAndUpdate(
@@ -49,6 +50,8 @@ exports.updateTasteOfOurLand = async (req, res) => {
         res.status(500).json({ message: 'Error updating TasteOfOurLand', error });
     }
 };
+
+
 
 exports.deleteTasteOfOurLand = async (req, res) => {
     try {

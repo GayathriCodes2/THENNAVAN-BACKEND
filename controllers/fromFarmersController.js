@@ -40,6 +40,8 @@ exports.updateFromFarmers = async (req, res) => {
             req.body,
             { new: true }
         );
+        console.log(req.body,"./........",req.params.fromFarmers_id);
+
         if (!updatedFromFarmers) {
             res.status(404).json({ message: 'FromFarmers not found' });
         } else {

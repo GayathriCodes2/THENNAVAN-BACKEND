@@ -1,474 +1,526 @@
 {
-    "info": {
-        "_postman_id": "your-postman-collection-id",
-        "name": "Tennavan API",
-        "description": "Collection for Farmers Market API endpoints",
-        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-    },
-    "item": [
-        {
-            "name": "Admin API",
-            "item": [
-                {
-                    "name": "Create Admin",
-                    "request": {
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"username\": \"admin1\",\n    \"password\": \"password123\"\n}"
-                        },
-                        "url": {
-                            "raw": "http://localhost:your-port/admin/create",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "admin",
-                                "create"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Get All Admins",
-                    "request": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/admin/getAll",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "admin",
-                                "getAll"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Get Admin by ID",
-                    "request": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/admin/getById/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "admin",
-                                "getById",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Update Admin",
-                    "request": {
-                        "method": "PUT",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"username\": \"admin_updated\",\n    \"password\": \"updated_password\"\n}"
-                        },
-                        "url": {
-                            "raw": "http://localhost:your-port/admin/update/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "admin",
-                                "update",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Delete Admin",
-                    "request": {
-                        "method": "DELETE",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/admin/delete/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "admin",
-                                "delete",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        },
-        {
-            "name": "FromFarmers API",
-            "item": [
-                {
-                    "name": "Create FromFarmers",
-                    "request": {
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"productImage\": \"image_url\",\n    \"productName\": \"Product 1\",\n    \"description\": \"Description 1\",\n    \"quantity1\": 10,\n    \"quantityValue1\": \"kg\",\n    \"price1\": 20.5,\n    \"quantity2\": 5,\n    \"quantityValue2\": \"lbs\",\n    \"price2\": 15.75,\n    \"quantity3\": 8,\n    \"quantityValue3\": \"pieces\",\n    \"isOrganic\": true\n}"
-                        },
-                        "url": {
-                            "raw": "http://localhost:your-port/fromFarmers/create",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "fromFarmers",
-                                "create"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Get All FromFarmers",
-                    "request": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/fromFarmers/getAll",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "fromFarmers",
-                                "getAll"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Get FromFarmers by ID",
-                    "request": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/fromFarmers/getById/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "fromFarmers",
-                                "getById",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Update FromFarmers",
-                    "request": {
-                        "method": "PUT",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"productName\": \"Updated Product\",\n    \"description\": \"Updated Description\",\n    \"quantity1\": 15,\n    \"quantityValue1\": \"grams\",\n    \"price1\": 25.0,\n    \"quantity2\": 8,\n    \"quantityValue2\": \"oz\",\n    \"price2\": 18.5,\n    \"quantity3\": 12,\n    \"quantityValue3\": \"pieces\"\n}"
-                        },
-                        "url": {
-                            "raw": "http://localhost:your-port/fromFarmers/update/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "fromFarmers",
-                                "update",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Delete FromFarmers",
-                    "request": {
-                        "method": "DELETE",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/fromFarmers/delete/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "fromFarmers",
-                                "delete",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        },
-        {
-            "name": "TasteOfOurLand API",
-            "item": [
-                {
-                    "name": "Create TasteOfOurLand",
-                    "request": {
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"productImage\": \"image_url\",\n    \"productName\": \"Product 1\",\n    \"description\": \"Description 1\",\n    \"quantity1\": 10,\n    \"price1\": 20.5,\n    \"quantityValue1\": \"kg\",\n    \"quantity2\": 5,\n    \"price2\": 15.75,\n    \"quantityValue2\": \"lbs\",\n    \"quantity3\": 8,\n    \"price3\": 30.0,\n    \"quantityValue3\": \"pieces\",\n    \"isOrganic\": true\n}"
-                        },
-                        "url": {
-                            "raw": "http://localhost:your-port/tasteOfOurLand/create",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "tasteOfOurLand",
-                                "create"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Get All TasteOfOurLand",
-                    "request": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/tasteOfOurLand/getAll",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "tasteOfOurLand",
-                                "getAll"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Get TasteOfOurLand by ID",
-                    "request": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/tasteOfOurLand/getById/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "tasteOfOurLand",
-                                "getById",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Update TasteOfOurLand",
-                    "request": {
-                        "method": "PUT",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"productName\": \"Updated Product\",\n    \"description\": \"Updated Description\",\n    \"quantity1\": 15,\n    \"price1\": 25.0,\n    \"quantityValue1\": \"grams\",\n    \"quantity2\": 8,\n    \"price2\": 18.5,\n    \"quantityValue2\": \"oz\",\n    \"quantity3\": 12,\n    \"price3\": 40.0,\n    \"quantityValue3\": \"pieces\"\n}"
-                        },
-                        "url": {
-                            "raw": "http://localhost:your-port/tasteOfOurLand/update/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "tasteOfOurLand",
-                                "update",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Delete TasteOfOurLand",
-                    "request": {
-                        "method": "DELETE",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/tasteOfOurLand/delete/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "tasteOfOurLand",
-                                "delete",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        },
-        {
-            "name": "TasteOfOurLand API",
-            "item": [
-                {
-                    "name": "Create LoveOfOurLadies",
-                    "request": {
-                        "method": "POST",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"productImage\": \"image_url\",\n    \"productName\": \"Product 1\",\n    \"description\": \"Description 1\",\n    \"quantity1\": 10,\n    \"price1\": 20.5,\n    \"quantityValue1\": \"kg\",\n    \"quantity2\": 5,\n    \"price2\": 15.75,\n    \"quantityValue2\": \"lbs\",\n    \"quantity3\": 8,\n    \"price3\": 30.0,\n    \"quantityValue3\": \"pieces\",\n    \"isOrganic\": true\n}"
-                        },
-                        "url": {
-                            "raw": "http://localhost:your-port/loveOfOurLadies/create",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "loveOfOurLadies",
-                                "create"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Get All LoveOfOurLadies",
-                    "request": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/loveOfOurLadies/getAll",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "loveOfOurLadies",
-                                "getAll"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Get LoveOfOurLadies by ID",
-                    "request": {
-                        "method": "GET",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/loveOfOurLadies/getById/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "loveOfOurLadies",
-                                "getById",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Update LoveOfOurLadies",
-                    "request": {
-                        "method": "PUT",
-                        "header": [],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\n    \"productName\": \"Updated Product\",\n    \"description\": \"Updated Description\",\n    \"quantity1\": 15,\n    \"price1\": 25.0,\n    \"quantityValue1\": \"grams\",\n    \"quantity2\": 8,\n    \"price2\": 18.5,\n    \"quantityValue2\": \"oz\",\n    \"quantity3\": 12,\n    \"price3\": 40.0,\n    \"quantityValue3\": \"pieces\"\n}"
-                        },
-                        "url": {
-                            "raw": "http://localhost:your-port/loveOfOurLadies/update/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "loveOfOurLadies",
-                                "update",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Delete LoveOfOurLadies",
-                    "request": {
-                        "method": "DELETE",
-                        "header": [],
-                        "url": {
-                            "raw": "http://localhost:your-port/loveOfOurLadies/delete/1",
-                            "protocol": "http",
-                            "host": [
-                                "localhost"
-                            ],
-                            "port": "your-port",
-                            "path": [
-                                "loveOfOurLadies",
-                                "delete",
-                                "1"
-                            ]
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        }
-    ]
+	"info": {
+		"_postman_id": "d0581663-cd17-4aad-bc3b-d50afe4f09a4",
+		"name": "Tennavan API",
+		"description": "Collection for Farmers Market API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31705390"
+	},
+	"item": [
+		{
+			"name": "Admin API",
+			"item": [
+				{
+					"name": "Create Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"admin_id\": 1,\n    \"username\": \"admin1\",\n    \"password\": \"password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/admins/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"admins",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Admins",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3002/admins/admins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"admins",
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Admin by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/admins/admin/6575ea823fa719496cb25d87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"admins",
+								"admin",
+								"6575ea823fa719496cb25d87"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin1\",\n    \"password\": \"password1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/admins/admin/6575ea823fa719496cb25d87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"admins",
+								"admin",
+								"6575ea823fa719496cb25d87"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/admins/admin/6575ec106b9c3eb3dd833e3f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"admins",
+								"admin",
+								"6575ec106b9c3eb3dd833e3f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FromFarmers API",
+			"item": [
+				{
+					"name": "Create FromFarmers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fromfarmers_id\": 2,\n    \"productImage\": \"image_url\",\n    \"productName\": \"Product 1\",\n    \"description\": \"Description 1\",\n    \"quantity1\": 10,\n    \"quantityValue1\": \"kg\",\n    \"price1\": 20.5,\n    \"quantity2\": 5,\n    \"quantityValue2\": \"lbs\",\n    \"price2\": 15.75,\n    \"quantity3\": 8,\n    \"quantityValue3\": \"pieces\",\n    \"price3\": 15.75,\n    \"isOrganic\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/fromfarmers/fromfarmer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"fromfarmers",
+								"fromfarmer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All FromFarmers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/fromfarmers/fromfarmers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"fromfarmers",
+								"fromfarmers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get FromFarmers by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/fromfarmers/fromfarmers/6575f26731d1162c4946b79b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"fromfarmers",
+								"fromfarmers",
+								"6575f26731d1162c4946b79b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update FromFarmers",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fromfarmers_id\": 1,\n    \"productImage\": \"image_url\",\n    \"productName\": \"Product 1\",\n    \"description\": \"Description 1\",\n    \"quantity1\": 10,\n    \"quantityValue1\": \"kg\",\n    \"price1\": 20.5,\n    \"quantity2\": 5,\n    \"quantityValue2\": \"lbs\",\n    \"price2\": 15.75,\n    \"quantity3\": 8,\n    \"quantityValue3\": \"pieces\",\n    \"price3\": 15.75,\n    \"isOrganic\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/fromfarmers/fromfarmers/657601779b7edfb4b471bcdb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"fromfarmers",
+								"fromfarmers",
+								"657601779b7edfb4b471bcdb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete FromFarmers",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/fromfarmers/fromfarmers/6575f26731d1162c4946b79b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"fromfarmers",
+								"fromfarmers",
+								"6575f26731d1162c4946b79b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TasteOfOurLand API",
+			"item": [
+				{
+					"name": "Create TasteOfOurLand",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tasteofourland_id\": 1,\n    \"productImage\": \"image_url\",\n    \"productName\": \"Product 1\",\n    \"description\": \"Description 1\",\n    \"quantity1\": 10,\n    \"price1\": 20.5,\n    \"quantityValue1\": \"kg\",\n    \"quantity2\": 5,\n    \"price2\": 15.75,\n    \"quantityValue2\": \"lbs\",\n    \"quantity3\": 8,\n    \"price3\": 30.0,\n    \"quantityValue3\": \"pieces\",\n    \"isOrganic\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/tasteofourland/tasteofourland",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"tasteofourland",
+								"tasteofourland"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All TasteOfOurLand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/tasteofourland/tasteofourlands",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"tasteofourland",
+								"tasteofourlands"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get TasteOfOurLand by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/tasteofourland/tasteofourland/6575f7137705402852ef78d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"tasteofourland",
+								"tasteofourland",
+								"6575f7137705402852ef78d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update TasteOfOurLand",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tasteofourland_id\": 1,\n    \"productImage\": \"image_url\",\n    \"productName\": \"Product 1\",\n    \"description\": \"Description 1\",\n    \"quantity1\": 10,\n    \"price1\": 20.5,\n    \"quantityValue1\": \"kg\",\n    \"quantity2\": 5,\n    \"price2\": 15.75,\n    \"quantityValue2\": \"lbs\",\n    \"quantity3\": 8,\n    \"price3\": 30,\n    \"quantityValue3\": \"pieces\",\n    \"isOrganic\": true,\n    \"__v\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/tasteofourland/tasteofourland/6575f7137705402852ef78d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"tasteofourland",
+								"tasteofourland",
+								"6575f7137705402852ef78d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete TasteOfOurLand",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3002/tasteofourland/tasteofourland/6575f55b7705402852ef78c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"tasteofourland",
+								"tasteofourland",
+								"6575f55b7705402852ef78c7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LoveOfOurLadies API",
+			"item": [
+				{
+					"name": "Create LoveOfOurLadies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"loveofourladies_id\":1,\n    \"productImage\": \"image_url\",\n    \"productName\": \"Product 1\",\n    \"description\": \"Description 1\",\n    \"quantity1\": 10,\n    \"price1\": 20.5,\n    \"quantityValue1\": \"kg\",\n    \"quantity2\": 5,\n    \"price2\": 15.75,\n    \"quantityValue2\": \"lbs\",\n    \"quantity3\": 8,\n    \"price3\": 30.0,\n    \"quantityValue3\": \"pieces\",\n    \"isOrganic\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/loveofourladies/loveofourladies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"loveofourladies",
+								"loveofourladies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All LoveOfOurLadies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/loveofourladies/loveofourladiess",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"loveofourladies",
+								"loveofourladiess"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get LoveOfOurLadies by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/loveofourladies/loveofourladies/6575fb860d5bc338714b5e00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"loveofourladies",
+								"loveofourladies",
+								"6575fb860d5bc338714b5e00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update LoveOfOurLadies",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"6575fb860d5bc338714b5e00\",\n    \"loveofourladies_id\": 1,\n    \"productImage\": \"image_url\",\n    \"productName\": \"Product 1\",\n    \"description\": \"Description 1\",\n    \"quantity1\": 10,\n    \"price1\": 20.5,\n    \"quantityValue1\": \"kg\",\n    \"quantity2\": 5,\n    \"price2\": 15.75,\n    \"quantityValue2\": \"lbs\",\n    \"quantity3\": 8,\n    \"price3\": 30,\n    \"quantityValue3\": \"pieces\",\n    \"isOrganic\": true,\n    \"__v\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3002/loveofourladies/loveofourladies/6575fb860d5bc338714b5e00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"loveofourladies",
+								"loveofourladies",
+								"6575fb860d5bc338714b5e00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete LoveOfOurLadies",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002/loveofourladies/loveofourladies/6575fb860d5bc338714b5e00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002",
+							"path": [
+								"loveofourladies",
+								"loveofourladies",
+								"6575fb860d5bc338714b5e00"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
 }
