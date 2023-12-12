@@ -1,5 +1,5 @@
 // index.js
-
+const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
 const dbConnect = require('./database/connection');
@@ -11,9 +11,11 @@ const fromFarmersRoutes = require('./routes/fromfarmers');
 const tasteOfOurLandRoutes = require('./routes/tasteofourland');
 const loveOfOurLadiesRoutes = require('./routes/loveofourladies');
 
+
 const app = express();
 const port = 3002;
 
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/admins', adminRoutes);
