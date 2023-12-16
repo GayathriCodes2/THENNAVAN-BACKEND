@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const fromFarmersSchema = new Schema({
-    fromfarmers_id: { type: Number, autoIncrement: true, required: true },
+    fromfarmers_id: { type: Number, autoIncrement: true },
     productImage: { type: String, required: true }, // Assuming the image path or URL is a string
     productName: { type: String, required: true },
     description: { type: String, required: true },

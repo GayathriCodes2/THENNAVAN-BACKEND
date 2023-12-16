@@ -4,6 +4,8 @@ const LoveOfOurLadies = require('../models/loveOfOurLadies');
 exports.createLoveOfOurLadies = async (req, res) => {
     try {
         const newLoveOfOurLadies = new LoveOfOurLadies(req.body);
+        console.log("***********************");
+        console.log(req.body);
         const savedLoveOfOurLadies = await newLoveOfOurLadies.save();
         res.status(201).json(savedLoveOfOurLadies);
     } catch (error) {
