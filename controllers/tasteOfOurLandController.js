@@ -6,10 +6,11 @@ exports.createTasteOfOurLand = async (req, res) => {
         const newTasteOfOurLand = new TasteOfOurLand(req.body);
         console.log("***********************");
         console.log(newTasteOfOurLand);
+        
+        console.log("TasteOfOurLand products created successfully");
         const savedTasteOfOurLand = await newTasteOfOurLand.save();
         res.status(201).json(savedTasteOfOurLand);
         
-        console.log("TasteOfOurLand products created successfully");
     } catch (error) {
         res.status(400).json({ message: 'Error creating TasteOfOurLand', error });
     }
