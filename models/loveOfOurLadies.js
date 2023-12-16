@@ -4,19 +4,19 @@ const Schema = mongoose.Schema;
 
 const loveOfOurLadiesSchema = new Schema({
     loveofourladies_id: { type: Number, autoIncrement: true},
-    productImage: { type: String, required: true },
-    productName: { type: String, required: true },
-    description: { type: String, required: true },
-    quantity1: { type: Number, required: true },
-    price1: { type: Number, required: true },
-    quantityValue1: { type: String, required: true }, // New field
-    quantity2: { type: Number, required: true },
-    price2: { type: Number, required: true },
-    quantityValue2: { type: String, required: true }, // New field
-    quantity3: { type: Number, required: true },
-    price3: { type: Number, required: true },
-    quantityValue3: { type: String, required: true }, // New field
-    isOrganic: { type: Boolean, default: false },
+    productImage: { type: String },//
+    productName: { type: String },
+    description: { type: String },
+    quantity1: { type: Number },
+    price1: { type: Number },
+    quantity1Unit: { type: String }, // New field
+    quantity2: { type: Number },
+    price2: { type: Number },
+    quantity2Unit: { type: String }, // New field
+    quantity3: { type: Number },
+    price3: { type: Number },
+    quantity3Unit: { type: String }, // New field
+    isOrganic: { type: Boolean, default: true },
     // Add other fields as needed
 });
 

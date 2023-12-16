@@ -4,8 +4,12 @@ const TasteOfOurLand = require('../models/tasteOfOurLand');
 exports.createTasteOfOurLand = async (req, res) => {
     try {
         const newTasteOfOurLand = new TasteOfOurLand(req.body);
+        console.log("***********************");
+        console.log(newTasteOfOurLand);
         const savedTasteOfOurLand = await newTasteOfOurLand.save();
         res.status(201).json(savedTasteOfOurLand);
+        
+        console.log("TasteOfOurLand products created successfully");
     } catch (error) {
         res.status(400).json({ message: 'Error creating TasteOfOurLand', error });
     }

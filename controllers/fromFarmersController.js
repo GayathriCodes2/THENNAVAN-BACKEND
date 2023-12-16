@@ -4,8 +4,11 @@ const FromFarmers = require('../models/fromFarmers');
 exports.createFromFarmers = async (req, res) => {
     try {
         const newFromFarmers = new FromFarmers(req.body);
+        console.log("***********************");
+        console.log(newFromFarmers);
         const savedFromFarmers = await newFromFarmers.save();
         res.status(201).json(savedFromFarmers);
+        console.log("From farmers products created successfully");
     } catch (error) {
         res.status(400).json({ message: 'Error creating FromFarmers', error });
     }
