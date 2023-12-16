@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const tasteOfOurLandSchema = new Schema({
-    tasteofourland_id: { type: Number, autoIncrement: true, required: true },
+    tasteofourland_id: { type: Number, autoIncrement: true},
     productImage: { type: String, required: true },
     productName: { type: String, required: true },
     description: { type: String, required: true },
