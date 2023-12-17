@@ -5,7 +5,7 @@ exports.createLoveOfOurLadies = async (req, res) => {
     try {
         const newLoveOfOurLadies = new LoveOfOurLadies(req.body);
         console.log("***********************");
-        console.log(req.body);
+        console.log(newLoveOfOurLadies);
         const savedLoveOfOurLadies = await newLoveOfOurLadies.save();
         res.status(201).json(savedLoveOfOurLadies);
     } catch (error) {
