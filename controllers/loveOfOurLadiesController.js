@@ -11,6 +11,7 @@ exports.createLoveOfOurLadies = async (req, res) => {
 
         res.status(201).json(savedLoveOfOurLadies);
     } catch (error) {
+        console.error('Error creating loveOfOurLadiesController ', error);
         res.status(400).json({ message: 'Error creating LoveOfOurLadies', error });
     }
 };

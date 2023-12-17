@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const loveOfOurLadiesSchema = new Schema({
     productImage: { type: String },
     productName: { type: String },
+    category: {type:String, default: 'loveOfOurLadies'},
     description: { type: String },
     quantity1: { type: Number },
     price1: { type: Number },

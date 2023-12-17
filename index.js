@@ -16,8 +16,7 @@ const app = express();
 const port = 3002;
 
 app.use(cors());
-app.use(bodyParser.json());
-
+app.use(bodyParser.json({ limit: '20mb' }));
 app.use('/admins', adminRoutes);
 app.use('/fromfarmers', fromFarmersRoutes);
 app.use('/tasteofourland', tasteOfOurLandRoutes);

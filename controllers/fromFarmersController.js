@@ -11,7 +11,8 @@ exports.createFromFarmers = async (req, res) => {
         console.log("----------------------",savedFromFarmers);
         res.status(201).json(savedFromFarmers);
     } catch (error) {
-        res.status(400).json({ message: 'Error creating FromFarmers', error });
+        console.error('Error creating FromFarmers', error);
+        res.status(400).json({ message: 'Error creating FromFarmers', error: error.message });
     }
 };
 
