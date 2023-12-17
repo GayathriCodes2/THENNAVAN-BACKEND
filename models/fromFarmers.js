@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const fromFarmersSchema = new Schema({
-    fromfarmers_id: { type: Number, autoIncrement: true },
-    productImage: { type: String, required: true }, // Assuming the image path or URL is a string
+    productImage: { type: String, required: true },
     productName: { type: String, required: true },
     description: { type: String, required: true },
     quantity1: { type: Number, required: true },
@@ -16,8 +15,7 @@ const fromFarmersSchema = new Schema({
     quantity3: { type: Number, required: true },
     quantityValue3: { type: String, required: true },
     price3: { type: Number, required: true },
-    isOrganic: { type: Boolean, default: false }, // Assuming it's a boolean field
-    // Add other fields as needed
+    isOrganic: { type: Boolean, default: false }, 
 });
 
 const FromFarmers = mongoose.model('FromFarmers', fromFarmersSchema);

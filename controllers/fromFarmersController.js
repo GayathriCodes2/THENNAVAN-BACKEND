@@ -8,6 +8,7 @@ exports.createFromFarmers = async (req, res) => {
         console.log(newFromFarmers);
         console.log("From farmers products created successfully");
         const savedFromFarmers = await newFromFarmers.save();
+        console.log("----------------------",savedFromFarmers);
         res.status(201).json(savedFromFarmers);
     } catch (error) {
         res.status(400).json({ message: 'Error creating FromFarmers', error });

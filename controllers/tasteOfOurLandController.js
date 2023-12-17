@@ -9,6 +9,7 @@ exports.createTasteOfOurLand = async (req, res) => {
         
         console.log("TasteOfOurLand products created successfully");
         const savedTasteOfOurLand = await newTasteOfOurLand.save();
+        console.log("-------------------------",savedTasteOfOurLand);
         res.status(201).json(savedTasteOfOurLand);
         
     } catch (error) {

@@ -6,8 +6,9 @@ exports.createLoveOfOurLadies = async (req, res) => {
         const newLoveOfOurLadies = new LoveOfOurLadies(req.body);
         console.log("***********************");
         console.log(newLoveOfOurLadies);
-        console.log("LoveOfOur Ladies products created successfully");
         const savedLoveOfOurLadies = await newLoveOfOurLadies.save();
+        console.log("-----------------------",savedLoveOfOurLadies);
+
         res.status(201).json(savedLoveOfOurLadies);
     } catch (error) {
         res.status(400).json({ message: 'Error creating LoveOfOurLadies', error });
