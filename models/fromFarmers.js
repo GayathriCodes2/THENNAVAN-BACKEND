@@ -23,3 +23,4 @@ const fromFarmersSchema = new Schema({
 const FromFarmers = mongoose.model('FromFarmers', fromFarmersSchema);
 
 module.exports = FromFarmers;
+ 

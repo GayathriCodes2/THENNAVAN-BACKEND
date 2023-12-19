@@ -60,10 +60,12 @@ exports.deleteLoveOfOurLadies = async (req, res) => {
         const deletedLoveOfOurLadies = await LoveOfOurLadies.findOneAndDelete({
             _id: req.params.loveOfOurLadies_id
         });
+        console.log("Deleted",deletedLoveOfOurLadies);
         if (!deletedLoveOfOurLadies) {
             res.status(404).json({ message: 'LoveOfOurLadies not found' });
         } else {
             res.status(200).json(deletedLoveOfOurLadies);
+            console.log("Deleted",deletedLoveOfOurLadies);
         }
     } catch (error) {
         res.status(500).json({ message: 'Error deleting LoveOfOurLadies', error });
