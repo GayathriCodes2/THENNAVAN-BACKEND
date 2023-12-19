@@ -17,6 +17,7 @@ const tasteOfOurLandSchema = new Schema({
     price3: { type: Number },
     quantity3Unit: { type: String },
     isOrganic: { type: Boolean, default: true },
+    isAvailableOn: { type: Boolean, default: true },
     // Add other fields as needed
 });
 
