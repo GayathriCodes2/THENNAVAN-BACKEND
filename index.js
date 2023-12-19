@@ -17,10 +17,10 @@ const port = 3002;
 
 app.use(cors());
 app.use(bodyParser.json({ limit: '20mb' }));
-app.use('/admins', adminRoutes);
-app.use('/fromfarmers', fromFarmersRoutes);
-app.use('/tasteofourland', tasteOfOurLandRoutes);
-app.use('/loveofourladies', loveOfOurLadiesRoutes);
+app.use('/', adminRoutes);
+app.use('/', fromFarmersRoutes);
+app.use('/', tasteOfOurLandRoutes);
+app.use('/', loveOfOurLadiesRoutes);
 
 app.use(errorMiddleware);
 
