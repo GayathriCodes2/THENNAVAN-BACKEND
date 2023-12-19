@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Define MongoDB connection URL and options
-const url = 'mongodb+srv://thennavanstores:Muthukumar%402002@cluster0.c9rj3h5.mongodb.net/'; 
+const url = 'mongodb+srv://thennavanstores:UMzFMVRG5sPQy5HE@cluster0.eth6nzy.mongodb.net/?retryWrites=true&w=majority';
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
