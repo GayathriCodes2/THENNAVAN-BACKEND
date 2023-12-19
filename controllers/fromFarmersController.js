@@ -6,12 +6,13 @@ exports.createFromFarmers = async (req, res) => {
         const newFromFarmers = new FromFarmers(req.body);
         console.log("***********************");
         console.log(newFromFarmers);
-        const savedFromFarmers = await newFromFarmers.save();
-        console.log(savedFromFarmers);
-        res.status(201).json(savedFromFarmers);
         console.log("From farmers products created successfully");
+        const savedFromFarmers = await newFromFarmers.save();
+        console.log("----------------------",savedFromFarmers);
+        res.status(201).json(savedFromFarmers);
     } catch (error) {
-        res.status(400).json({ message: 'Error creating FromFarmers', error });
+        console.error('Error creating FromFarmers', error);
+        res.status(400).json({ message: 'Error creating FromFarmers', error: error.message });
     }
 };
 
@@ -27,6 +28,7 @@ exports.getAllFromFarmers = async (req, res) => {
 exports.getFromFarmersById = async (req, res) => {
     try {
         const fromFarmers = await FromFarmers.findOne({ _id: req.params.fromFarmers_id });
+        console.log(fromFarmers);
         if (!fromFarmers) {
             res.status(404).json({ message: 'FromFarmers not found' });
         } else {
@@ -34,6 +36,7 @@ exports.getFromFarmersById = async (req, res) => {
         }
     } catch (error) {
         res.status(500).json({ message: 'Error retrieving FromFarmers', error });
+        console.log(error);
     }
 };
 
